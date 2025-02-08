@@ -14,19 +14,24 @@ function App() {
       title: "Plataforma E-commerce",
       description: "Solución completa de comercio electrónico con Spring Boot y React",
       technologies: ["java", "spring", "react", "mysql"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3",
+      repoUrl: "https://github.com/username/ecommerce",
+      demoUrl: "https://ecommerce-demo.com"
     },
     {
       title: "Sistema de Gestión de Tareas",
       description: "Herramienta de gestión de proyectos con actualizaciones en tiempo real",
       technologies: ["java", "spring", "react", "mongodb"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=2429&ixlib=rb-4.0.3"
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=2429&ixlib=rb-4.0.3",
+      repoUrl: "https://github.com/username/task-manager",
+      demoUrl: "https://task-manager-demo.com"
     },
     {
       title: "Servicio de Autenticación",
       description: "Sistema seguro de autenticación usando Spring Security",
       technologies: ["java", "spring", "security"],
-      image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3"
+      image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3",
+      repoUrl: "https://github.com/username/auth-service"
     }
   ];
 
@@ -37,15 +42,16 @@ function App() {
     { name: "HTML/CSS", icon: "🎨" },
     { name: "JavaScript", icon: "📜" },
     { name: "MySQL", icon: "📊" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "Git", icon: "📚" }
   ];
 
-  const filteredProjects = selectedTech === 'all' 
-    ? projects 
+  const filteredProjects = selectedTech === 'all'
+    ? projects
     : projects.filter(project => project.technologies.includes(selectedTech.toLowerCase()));
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
-      {/* Hero Section with Integrated Navbar */}
       <section className="relative">
         <nav className="absolute w-full z-10 pt-6 px-6">
           <div className="container mx-auto">
@@ -76,11 +82,11 @@ function App() {
                 Como un hábil Game Master, creo soluciones elegantes para desafíos complejos
               </p>
               <div className="flex justify-center md:justify-start space-x-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+                <a href="https://github.com/SoyElGary1" target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors">
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                <a href="www.linkedin.com/in/soyelgary" target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </a>
@@ -93,7 +99,7 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+
       <section id="about" className="bg-gray-800 py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -124,13 +130,13 @@ function App() {
         </div>
       </section>
 
-      {/* Technologies Section */}
+
       <section id="technologies" className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
             Tecnologías
           </h2>
-          <TechFilter 
+          <TechFilter
             technologies={technologies}
             selectedTech={selectedTech}
             onTechSelect={setSelectedTech}
@@ -138,7 +144,7 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
+
       <section id="projects" className="bg-gray-800 py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -152,7 +158,7 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+
       <section id="contact" className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -166,7 +172,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
+
       <footer className="bg-gray-800 border-t border-gray-700 py-8">
         <div className="container mx-auto px-6 text-center text-gray-400">
           <p>© 2024 Christopher Nuñez Pardo. ¡Tira los dados para la iniciativa!</p>
