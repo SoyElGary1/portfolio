@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Dice1Icon as DiceIcon, User, Code2, Mail, Github, Linkedin, BookOpen, Dog, Gamepad2, Trophy, Brain, Coffee, Puzzle } from 'lucide-react';
+import { useState } from 'react';
+import { Dice1Icon as DiceIcon, User, Github, Linkedin, Download} from 'lucide-react';
 import ProjectCard from './components/ProjectCard';
 import TechFilter from './components/TechFilter';
 import ContactForm from './components/ContactForm';
@@ -41,9 +41,6 @@ function App() {
     { name: "React", icon: "⚛️" },
     { name: "HTML/CSS", icon: "🎨" },
     { name: "JavaScript", icon: "📜" },
-    { name: "MySQL", icon: "📊" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Git", icon: "📚" }
   ];
 
   const filteredProjects = selectedTech === 'all'
@@ -89,6 +86,13 @@ function App() {
                 <a href="www.linkedin.com/in/soyelgary" target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors">
                   <Linkedin className="h-6 w-6" />
+                </a>
+                <a href="/cv.pdf" download="christopher_nunez_cv.pdf"
+                  className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors">
+                  <span className="flex items-center">
+                    <Download className="h-6 w-6" /> {/* Si tienes un ícono de descarga */}
+                    <span className="ml-2">Descargar CV</span> {/* Opcional: texto junto al ícono */}
+                  </span>
                 </a>
               </div>
             </div>
