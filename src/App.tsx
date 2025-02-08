@@ -3,6 +3,8 @@ import { Dice1Icon as DiceIcon, User, Code2, Mail, Github, Linkedin, BookOpen, D
 import ProjectCard from './components/ProjectCard';
 import TechFilter from './components/TechFilter';
 import ContactForm from './components/ContactForm';
+import HeroSwiper from './components/HeroSwiper';
+import AboutSwiper from './components/AboutSwiper';
 
 function App() {
   const [selectedTech, setSelectedTech] = useState('all');
@@ -35,8 +37,6 @@ function App() {
     { name: "HTML/CSS", icon: "🎨" },
     { name: "JavaScript", icon: "📜" },
     { name: "MySQL", icon: "📊" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Git", icon: "📚" }
   ];
 
   const filteredProjects = selectedTech === 'all' 
@@ -45,6 +45,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
+      {/* Hero Section with Integrated Navbar */}
       <section className="relative">
         <nav className="absolute w-full z-10 pt-6 px-6">
           <div className="container mx-auto">
@@ -85,38 +86,23 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 transform hover:scale-105 transition-transform">
-                <Trophy className="h-8 w-8 text-purple-400 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Resolutor de Problemas</h3>
-                <p className="text-gray-400">Como resolver un rompecabezas complejo, divido los problemas en piezas manejables</p>
-              </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 transform hover:scale-105 transition-transform">
-                <Brain className="h-8 w-8 text-purple-400 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Pensador Estratégico</h3>
-                <p className="text-gray-400">Abordo los desafíos con la mentalidad de un jugador de juegos de estrategia</p>
-              </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 transform hover:scale-105 transition-transform">
-                <Coffee className="h-8 w-8 text-purple-400 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Experto en Java</h3>
-                <p className="text-gray-400">Dominando el arte del desarrollo Java como perfeccionar un movimiento especial</p>
-              </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 transform hover:scale-105 transition-transform">
-                <Puzzle className="h-8 w-8 text-purple-400 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Jugador de Equipo</h3>
-                <p className="text-gray-400">Colaborando efectivamente, como en los juegos de mesa cooperativos</p>
-              </div>
+            <div className="flex justify-center items-center">
+              <HeroSwiper />
             </div>
           </div>
         </div>
       </section>
 
+      {/* About Section */}
       <section id="about" className="bg-gray-800 py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
             Sobre Mí
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
+              <AboutSwiper />
+            </div>
             <div className="space-y-6">
               <div className="bg-gray-700 p-6 rounded-lg border border-gray-600">
                 <div className="flex items-center space-x-4 mb-4">
@@ -124,7 +110,7 @@ function App() {
                   <h3 className="text-xl font-semibold">El Viaje del Desarrollador</h3>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Como Desarrollador Full Stack, abordo cada proyecto como una nueva aventura de juego de mesa. Con más de 5 años de experiencia
+                  Como Desarrollador Full Stack, abordo cada proyecto como una nueva aventura de juego de mesa. Con experiencia
                   en desarrollo Java y una pasión por crear soluciones elegantes, he dominado las reglas del juego del desarrollo
                   mientras mantengo el entusiasmo por aprender nuevas estrategias.
                 </p>
@@ -133,53 +119,12 @@ function App() {
                   Creo en el código limpio, las pruebas exhaustivas y la creación de aplicaciones que los usuarios amen usar.
                 </p>
               </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-700 p-4 rounded-lg border border-gray-600">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Code2 className="h-5 w-5 text-purple-400" />
-                    <span className="font-semibold">Stack Tecnológico</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Especialista en Java, Spring Boot y React con un enfoque estratégico para resolver problemas</p>
-                </div>
-                
-                <div className="bg-gray-700 p-4 rounded-lg border border-gray-600">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <BookOpen className="h-5 w-5 text-purple-400" />
-                    <span className="font-semibold">Aprendizaje</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Expandiendo constantemente mi repertorio tecnológico como coleccionar expansiones de juegos</p>
-                </div>
-                
-                <div className="bg-gray-700 p-4 rounded-lg border border-gray-600">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Gamepad2 className="h-5 w-5 text-purple-400" />
-                    <span className="font-semibold">Gaming</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Entusiasta de los juegos de mesa, aplicando pensamiento estratégico tanto en juegos como en código</p>
-                </div>
-                
-                <div className="bg-gray-700 p-4 rounded-lg border border-gray-600">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Dog className="h-5 w-5 text-purple-400" />
-                    <span className="font-semibold">Compañero</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Orgulloso dueño de un perro salchicha, trayendo alegría a las sesiones de programación</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3" 
-                alt="Juegos de mesa"
-                className="rounded-lg shadow-lg border-4 border-purple-500/20"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-lg"></div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Technologies Section */}
       <section id="technologies" className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -193,6 +138,7 @@ function App() {
         </div>
       </section>
 
+      {/* Projects Section */}
       <section id="projects" className="bg-gray-800 py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -206,6 +152,7 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section id="contact" className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -219,6 +166,7 @@ function App() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-gray-800 border-t border-gray-700 py-8">
         <div className="container mx-auto px-6 text-center text-gray-400">
           <p>© 2024 Christopher Nuñez Pardo. ¡Tira los dados para la iniciativa!</p>
