@@ -11,33 +11,33 @@ function App() {
 
   const projects = [
     {
-      title: "Plataforma E-commerce",
-      description: "Solución completa de comercio electrónico con Spring Boot y React",
-      technologies: ["java", "spring", "react", "mysql"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3",
-      repoUrl: "https://github.com/username/ecommerce",
-      demoUrl: "https://ecommerce-demo.com"
+      title: "URL Shortening API",
+      description: "Este proyecto es una API REST desarrollada con Spring Boot que permite acortar URLs y realizar operaciones CRUD sobre estas URLs. También proporciona estadísticas de acceso para cada URL acortada.",
+      technologies: ["java", "spring", "react", "postgresSQL"],
+      image: "./acortador-url.jpg",
+      repoUrl: "https://github.com/SoyElGary1/url_shortening_api",
     },
     {
-      title: "Sistema de Gestión de Tareas",
-      description: "Herramienta de gestión de proyectos con actualizaciones en tiempo real",
-      technologies: ["java", "spring", "react", "mongodb"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=2429&ixlib=rb-4.0.3",
-      repoUrl: "https://github.com/username/task-manager",
-      demoUrl: "https://task-manager-demo.com"
+      title: "Image Editor API",
+      description: "Image Editor API es un proyecto desarrollado con Spring Boot que permite a los usuarios subir imágenes y añadir texto superpuesto con un tamaño configurable. La API devuelve la imagen editada en formato PNG.",
+      technologies: ["java", "spring", "react", "docker"],
+      image: "./editor-imagenes.jpg",
+      repoUrl: "https://github.com/SoyElGary1/Image-editor-API",
+      demoUrl: "https://soyelgary1.github.io/image-editor-frontend/"
     },
     {
-      title: "Servicio de Autenticación",
-      description: "Sistema seguro de autenticación usando Spring Security",
-      technologies: ["java", "spring", "security"],
-      image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3",
-      repoUrl: "https://github.com/username/auth-service"
+      title: "Encriptador de texto",
+      description: "Este es un encriptador de texto desarrollado con HTML, CSS y JavaScript. Permite transformar un texto ingresado en una versión encriptada siguiendo reglas predefinidas y también permite desencriptarlo.",
+      technologies: ["html/css", "javascript"],
+      image: "encriptador.jpg",
+      repoUrl: "https://github.com/SoyElGary1/Encriptador-de-texto",
+      demoUrl: "https://soyelgary1.github.io/Encriptador-de-texto/"
     }
   ];
 
   const technologies = [
     { name: "Java", icon: "☕" },
-    { name: "Spring Boot", icon: "🍃" },
+    { name: "Spring", icon: "🍃" },
     { name: "React", icon: "⚛️" },
     { name: "HTML/CSS", icon: "🎨" },
     { name: "JavaScript", icon: "📜" },

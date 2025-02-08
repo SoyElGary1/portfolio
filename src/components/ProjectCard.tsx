@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <img 
           src={project.image} 
           alt={project.title}
-          className="w-full h-48 object-cover"
+          className="w-auto h-auto object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent"></div>
       </div>
