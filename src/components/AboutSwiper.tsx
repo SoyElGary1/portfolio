@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
+import { ChevronRight } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import { Code2, BookOpen, Gamepad2, Dog } from 'lucide-react';
@@ -29,7 +30,7 @@ const AboutSwiper = () => {
   ];
 
   return (
-    <div className="w-full max-w-sm">
+    <div className="relative w-full max-w-sm mx-auto">
       <Swiper
         grabCursor={true}
         effect={'creative'}
@@ -55,6 +56,12 @@ const AboutSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="hidden md:block absolute -right-12 top-1/2 -translate-y-1/2 transform animate-bounce-x">
+        <ChevronRight className="w-8 h-8 text-purple-400" />
+      </div>
+      <div className="md:hidden flex justify-center mt-4">
+        <ChevronRight className="w-8 h-8 text-purple-400 animate-bounce-y" />
+      </div>
     </div>
   );
 };
