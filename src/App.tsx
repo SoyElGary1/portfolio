@@ -48,10 +48,10 @@ function App() {
     : projects.filter(project => project.technologies.includes(selectedTech.toLowerCase()));
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
-      <section className="relative">
+    <div className="min-h-screen bg-gray-900 text-gray-100 w-full overflow-hidden">
+      <section className="relative w-full">
         <nav className="absolute w-full z-10 pt-6 px-6">
-          <div className="container mx-auto">
+          <div className="max-w-screen-lg mx-auto w-full">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <DiceIcon className="h-8 w-8 text-purple-500" />
@@ -59,25 +59,20 @@ function App() {
                   Christopher Nuñez Pardo
                 </span>
               </div>
-              <div className="hidden md:flex space-x-8">
-                <a href="#about" className="text-gray-300 hover:text-purple-400 transition-colors">Sobre Mí</a>
-                <a href="#technologies" className="text-gray-300 hover:text-purple-400 transition-colors">Tecnologías</a>
-                <a href="#projects" className="text-gray-300 hover:text-purple-400 transition-colors">Proyectos</a>
-                <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contacto</a>
-              </div>
             </div>
           </div>
         </nav>
 
-        <div className="container mx-auto px-6 pt-32 pb-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-screen-lg mx-auto px-6 pt-32 pb-16 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
-              <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
                 Desarrollador Full Stack
               </h1>
-              <p className="text-xl text-gray-400 mb-8">
+              <p className="text-lg md:text-xl text-gray-400 mb-8">
                 Como un hábil Game Master, creo soluciones elegantes para desafíos complejos
               </p>
+              <p className="text-lg md:text-xl text-gray-400 mb-8">Santiago, Chile.</p>
               <div className="flex justify-center md:justify-start space-x-4">
                 <a href="https://github.com/SoyElGary1" target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors">
@@ -88,29 +83,25 @@ function App() {
                   <Linkedin className="h-6 w-6" />
                 </a>
                 <a href="/cv.pdf" download="christopher_nunez_cv.pdf"
-                  className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors">
-                  <span className="flex items-center">
-                    <Download className="h-6 w-6" /> {/* Si tienes un ícono de descarga */}
-                    <span className="ml-2">Descargar CV</span> {/* Opcional: texto junto al ícono */}
-                  </span>
+                  className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-gray-700 transition-colors flex items-center">
+                  <Download className="h-6 w-6" /> <span className="ml-2">Descargar CV</span>
                 </a>
               </div>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center max-w-full overflow-hidden">
               <HeroSwiper />
             </div>
           </div>
         </div>
       </section>
 
-
       <section id="about" className="bg-gray-800 py-16">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-lg mx-auto px-6 w-full">
           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
             Sobre Mí
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center max-w-full overflow-hidden">
               <AboutSwiper />
             </div>
             <div className="space-y-6">
